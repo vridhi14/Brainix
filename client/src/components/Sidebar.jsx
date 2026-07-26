@@ -11,7 +11,8 @@ function Sidebar({sidebar , setSidebar}){
     sidebar ? "translate-x-0" : "max-sm:translate-x-full"
   } transition-all duration-300 ease-in-out`}>
         <div className='my-7 w-full'>
-            <img src={} alt="" />
+            <img src={user.imageUrl} alt="User avatar" className='w-13 rounded-full mx-auto'/>
+            <h1 className='mt-1 text-center'>{user.fullName}</h1>
         </div>      
     </div>
   )
