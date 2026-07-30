@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react' ; 
 import {dummyCreationData} from '../assets/assets.js'
 import { Sparkles } from 'lucide-react';
+import {Protect} from '@clerk/clerk-react'
 function Dashboard(){
 
     const [creations , setCreations] =useState([]); 
@@ -16,6 +17,7 @@ function Dashboard(){
     return(
         <div className='h-full overflow-y-scroll p-6'>
             <div className='flex justify-start gap-4 flex-wrap'>
+
                 <div className='flex justify-between items-center w-72 p-4 px-6 bg-white rounder-xl border border-bs-gray-200'>
                     <div className='text-slate-600'>
                         <p className='text-sm'>Total Creations</p>
@@ -26,6 +28,20 @@ function Dashboard(){
                         <Sparkles className='w-5 text-white'/>
                     </div>
                 </div>
+
+                <div className='flex justify-between items-center w-72 p-4 px-6 bg-white rounder-xl border border-bs-gray-200'>
+                    <div className='text-slate-600'>
+                        <p className='text-sm'>Active Plan</p>
+                        <h2 className='font-semibold text-xl'>
+                            <Protect plan= 'Premium' fallback="Free">Premium</Protect> 
+                        </h2>
+                        </div>
+
+                    <div className='w-10 h-10 rounded-lg bg-gradient-to-br from-[#3588F2] to-[#0BB0D7] text-white flex justify-center items-center'>
+                        <Sparkles className='w-5 text-white'/>
+                    </div>
+                </div>
+                
             </div>
             
         </div>
