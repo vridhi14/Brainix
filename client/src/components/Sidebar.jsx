@@ -27,11 +27,16 @@ function Sidebar({sidebar , setSidebar}){
             <img src={user.imageUrl} alt="User avatar" className='w-13 rounded-full mx-auto'/>
             <h1 className='mt-1 text-center'>{user.fullName}</h1>
 
-            <div>
+            <div className='px-6 mt-5 text-sm text-gray-600 font-medium'>
                 {navItems.map(({to,label , Icon}) =>(
                     <NavLink key={to} to={to} end={to === '/ai'} onClick={()=>
                         setSidebar(false)} className={({isActive}) =>`px-3.5 py-2.5 flex items-center gap-3 rounded ${isActive ? 'bg-gradient-to-r from-[#3C81F6] to-[#9234EA] text-white' : ''}`}>
-                            {}
+                        {({isActive})=>(
+                            <>
+                            <Icon className={`w-8 h-4 ${isActive ? 'text-white' : ''}`}/>
+                            {label}
+                            </>
+                        )}
 
                     </NavLink>
                 ))}
