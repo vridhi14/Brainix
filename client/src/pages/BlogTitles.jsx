@@ -1,5 +1,6 @@
 import { Hash, Sparkles } from 'lucide-react';
-import React from 'react' ; 
+import React, { useState } from 'react' ;
+ 
 
 function BlogTitles(){
        const blogCategories = ['General' , 'Technology' , 'Business', 'Health','Lifestyle','Education','Food','Travel'];
