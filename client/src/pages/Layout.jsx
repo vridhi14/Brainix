@@ -3,7 +3,6 @@ import { Outlet, useNavigate, useSearchParams } from 'react-router-dom';
 import {assets } from '../assets/assets.js'
 import { Menu, Sidebar, X } from 'lucide-react';
 import { set } from 'mongoose';
-import Sidebar from '../components/Sidebar.jsx';
 import { useUser , SignIn } from '@clerk/clerk-react';
 
 function Layout(){
