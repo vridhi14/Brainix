@@ -1,5 +1,5 @@
 import { Eraser, Sparkles } from 'lucide-react';
-import React from 'react' ; 
+import React, { useState } from 'react' ; 
 
 function RemoveBackground(){
     const [input , setInput] = useState("");
