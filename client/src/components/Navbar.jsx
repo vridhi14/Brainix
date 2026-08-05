@@ -14,15 +14,15 @@ function Navbar() {
   <div className="fixed z-10 w-full backdrop-blur-2xl flex justify-between items-center py-3 px-4 sm:px-20 xl:px-32">
 
     <img
-      src={assets.logo}
-      alt="logo"
-      className="w-32 sm:w-44 cursor-pointer"
-      onClick={() => navigate("/")}
-    />
+  src={assets.logo}
+  alt="logo"
+  className="h-12 sm:h-14 w-14 sm:w-16 rounded-full object-cover cursor-pointer"
+  onClick={() => navigate("/")}
+/>
 
     {
       user ? (
-        <UserButton />
+        <UserButton appearance={{elements: {avatarBox: "!w-12 !h-12"}}} />
       ) : (
         <button
           onClick={openSignIn}

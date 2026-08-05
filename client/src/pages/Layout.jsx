@@ -11,19 +11,13 @@ function Layout() {
   const { user } = useUser();
   return user ? (
     <div className="flex flex-col items-start justify-start h-screen">
-      {/* <nav className='w-full px-8 min-h-14 flex items-center justify-between border-b border-gray-200'>
-                <img className='cursor-pointer w-32 sm:w-44'src ={assets.logo} alt="" onClick={()=>navigate('/')}/>
-                {
-                    sidebar ? <X onClick ={()=> setSidebar(false)}className='w-6 h-6 text-gray-600 sm:hidden'/> : <Menu onClick ={()=> setSidebar(true)}className='w-6 h-6 text-gray-600 sm:hidden'/> 
-                }
-            </nav> */}
       <nav className="w-full px-8 py-3 flex items-center justify-between border-b border-gray-200 bg-white sticky top-0 z-10">
         <img
-          className="cursor-pointer h-8 sm:h-10 w-auto object-contain"
+          className="cursor-pointer h-12 sm:h-14 w-14 sm:w-16 object-cover rounded-full "
           src={assets.logo}
           alt="Brainix logo"
           onClick={() => navigate("/")}
-        />
+        /> 
         {sidebar ? (
           <X
             onClick={() => setSidebar(false)}
