@@ -47,7 +47,7 @@ function Sidebar({sidebar , setSidebar}){
             <div onClick={openUserProfile} className='flex gap-2 items-center cursor-pointer'>
                 <img src={user.imageUrl} className='w-8 rounded-full' alt="" />
                 <div>
-                    <h1 className='text-sm font-medium'>{user.fullname} </h1>
+                    <h1 className='text-sm font-medium'>{user.fullName} </h1>
                     <p className='text-xs text-gray-500'>
                         <Protect plan='premium' fallback ="Free">Premium</Protect>
                         Plan

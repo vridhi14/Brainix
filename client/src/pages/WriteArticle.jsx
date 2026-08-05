@@ -29,14 +29,16 @@ function WriteArticle(){
                 <p className='mt-4 text-sm font-medium'>Article Length</p>
 
                 <div className='mt-3 flex gap-3 flex-wrap sm:max-w-9/11'>
-                    {articleLength.map((item , index)=>{
-                        <span key={index} 
-                        className={`text-xs px-4 py-1 border rounded-full cursor-pointer ${selectedLength.text=== item.text ? 'bg-blue-50 text-blue-700' : 'text-gray-500 border-gray-300' }`} 
-                        onClick={()=>{setSelectedLength(item)}}>{item.text}</span>
-                    })}
+                    
+                    {articleLength.map((item, index) => (
+                    <span key={index}  className={`text-xs px-4 py-1 border  rounded-fullcursor-pointer $ {selectedLength.text=== item.text ? 'bg-blue-50 text-blue-700':'text-gray-500 border-gray-300'}`}
+                    onClick={() => setSelectedLength(item)}>
+                    {item.text}
+                    </span>
+                ))}
                 </div>
                 <br />
-                <button className='w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#226BFF] to-[#65ADFF] text-white px-4 py-2 mt-6 text-sm rounded-lg curso-pointer'>
+                <button className='w-full flex justify-center items-center gap-2 bg-linear-to-r from-[#226BFF] to-[#65ADFF] text-white px-4 py-2 mt-6 text-sm rounded-lg curso-pointer'>
                     <Edit className='w-5'/>
                     Generate Article
                 </button>

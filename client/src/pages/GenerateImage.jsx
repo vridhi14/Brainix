@@ -27,11 +27,12 @@ function GenerateImage(){
                 <p className='mt-4 text-sm font-medium'>Style</p>
 
                 <div className='mt-3 flex gap-3 flex-wrap sm:max-w-9/11'>
-                    {imageStyle.map((item)=>{
-                        <span key={index} 
-                        className={`text-xs px-4 py-1 border rounded-full cursor-pointer ${selectedStyle === item ? 'bg-green-50 text-green-700' : 'text-gray-500 border-gray-300' }`} 
-                        onClick={()=>{setSelectedStyle(item)}}>{item}</span>
-                    })}
+                   {imageStyle.map((item, index) => (
+                    <span key={index} className={`text-xs px-4 py-1 border rounded-full cursor-pointer ${selectedStyle === item ? 'bg-green-50 text-green-700' : 'text-gray-500 border-gray-300'}`}
+                    onClick={() => setSelectedStyle(item)}>
+                    {item}
+                    </span>
+                     ))}
                 </div>
 
                 <div className='my-6 flex items-center gap-2'>
@@ -45,7 +46,7 @@ function GenerateImage(){
                     <p className='text-sm'>Make this image public</p>
                 </div>
                 
-                <button className='w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#00AD25] to-[#04FF50] text-white px-4 py-2 mt-6 text-sm rounded-lg curso-pointer'>
+                <button className='w-full flex justify-center items-center gap-2 bg-linear-to-r from-[#00AD25] to-[#04FF50] text-white px-4 py-2 mt-6 text-sm rounded-lg curso-pointer'>
                     <Image className='w-5'/>
                     Generate Image
                 </button>

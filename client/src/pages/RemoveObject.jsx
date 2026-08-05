@@ -27,7 +27,7 @@ function RemoveObject(){
                 className='w-full p-2 px-3 mt-2 outline-none text-sm rounded-md border border-gray-300' placeholder='Describe what you want to remove..' required/>
 
 
-                <button className='w-full flex justify-center items-center gap-2 bg-gradient-to-r from-[#417DF6] to-[#8E37EB] text-white px-4 py-2 mt-6 text-sm rounded-lg curso-pointer'>
+                <button className='w-full flex justify-center items-center gap-2 bg-linear-to-r from-[#417DF6] to-[#8E37EB] text-white px-4 py-2 mt-6 text-sm rounded-lg curso-pointer'>
                     <Scissors className='w-5'/>
                     Remove Object
                 </button>
